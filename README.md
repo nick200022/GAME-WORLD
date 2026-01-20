@@ -1,4 +1,4 @@
-ame with BNB payments integration
+Game with BNB payments integration
 Copilot Chat
 Pong game with BNB payments integration
 You said: Create a simple Pong game using HTML,
