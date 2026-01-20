@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover" />
+  <title>GAME WORLD — Prototipo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="ui-top">
+    <div id="auth">
+      <button id="btnConnectWallet">Conectar Wallet</button>
+      <button id="btnSignInFirebase">Entrar (Email / GitHub)</button>
+      <span id="walletAddress"></span>
+      <span id="userEmail"></span>
+    </div>
+    <div id="payments">
+      <button id="btnPayBNB">Pagar 0.01 BNB</button>
+      <input id="tokenAddress" placeholder="Dirección BEP-20 (opcional)" />
+      <input id="tokenAmount" placeholder="Monto token (wei)" />
+      <button id="btnPayToken">Pagar token</button>
+    </div>
+  </div>
+
+  <div id="game-container">
+    <canvas id="canvas3d"></canvas>
+
+    <!-- Mobile controls overlay -->
+    <div id="mobile-controls">
+      <div id="joystick" class="pad"></div>
+      <div class="right-controls">
+        <button id="btnJump" class="action">Saltar</button>
+        <button id="btnAction" class="action">Acción</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="status">Click / tap para comenzar</div>
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+
+  <script src="auth.js"></script>
+  <script src="payments.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
